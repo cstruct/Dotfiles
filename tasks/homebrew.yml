@@ -1,0 +1,47 @@
+---
+- name: Install packages
+  homebrew:
+    update_homebrew: yes
+    name: '{{ item }}'
+  with_items:
+    - bash
+    - binutils
+    - bison
+    - colordiff
+    - curl
+    - diff-so-fancy
+    - ephemeralpg
+    - findutils
+    - fish
+    - flex
+    - gawk
+    - gdb
+    - ghostscript
+    - git
+    - gnu-indent
+    - gnu-sed
+    - gnu-tar
+    - gnu-which
+    - gnupg
+    - gnupg2
+    - gnutls
+    - htop
+    - imagemagick
+    - llvm
+    - mercurial
+    - nmap
+    - node
+    - postgresql
+    - pyenv
+    - realpath
+    - rename
+    - ruby
+    - terraform
+    - the_silver_searcher
+    - thefuck
+    - vim
+    - watch
+    - wdiff
+    - wget
+  tags:
+    - packages

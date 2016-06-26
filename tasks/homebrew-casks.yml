@@ -1,0 +1,75 @@
+---
+- name: Tap casks
+  homebrew_tap:
+    tap: caskroom/cask
+  tags:
+    - packages
+
+- name: Install casks (browsers)
+  homebrew_cask:
+    name: '{{ item }}'
+  with_items:
+    - google-chrome
+    - firefox
+  tags:
+    - packages
+
+- name: Install casks (entertainment)
+  homebrew_cask:
+    name: '{{ item }}'
+  with_items:
+    - spotify
+    - vlc
+  tags:
+    - packages
+
+- name: Install casks (communication)
+  homebrew_cask:
+    name: '{{ item }}'
+  with_items:
+    - skype
+    - slack
+  tags:
+    - packages
+
+- name: Install casks (security)
+  homebrew_cask:
+    name: '{{ item }}'
+  with_items:
+    - 1password
+  tags:
+    - packages
+
+- name: Install casks (devtools)
+  homebrew_cask:
+    name: '{{ item }}'
+  with_items:
+    - zeplin
+    - vmware-fusion
+    - virtualbox
+  tags:
+    - packages
+
+- name: Install casks (IDEs / editors)
+  homebrew_cask:
+    name: '{{ item }}'
+  with_items:
+    - visual-studio-code
+    - pycharm
+    - webstorm
+    - intellij-idea
+    - clion
+  tags:
+    - packages
+
+- name: Install casks (other)
+  homebrew_cask:
+    name: '{{ item }}'
+  with_items:
+    - flux
+    - spectacle
+    - caffeine
+    - google-drive
+    - dropbox
+  tags:
+    - packages

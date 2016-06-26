@@ -1,0 +1,14 @@
+---
+- name: Download robbyrussell theme
+  get_url:
+    url: https://raw.githubusercontent.com/oh-my-fish/theme-robbyrussell/master/fish_prompt.fish
+    dest: '{{ ansible_env.HOME }}/.config/fish/functions/fish_prompt.fish'
+    mode: 0600
+
+- name: Copy fish config
+  copy:
+    src: files/config.fish
+    dest: '{{ ansible_env.HOME }}/.config/fish/config.fish'
+
+- name: Set fish as login shell
+  shell: chsh -s /usr/local/bin/fish

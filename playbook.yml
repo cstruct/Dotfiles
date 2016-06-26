@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+  - include: tasks/homebrew.yml
+  - include: tasks/homebrew-casks.yml
+  - include: tasks/fish.yml
+  - include: tasks/git.yml
+  - include: tasks/pip.yml
+  - include: tasks/npm.yml

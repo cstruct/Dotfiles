@@ -1,0 +1,22 @@
+{
+  "name": basename.replace(/^node-/, ''),
+  "version": "0.0.0",
+  "description": prompt(),
+  "main": prompt('entry point', 'index.js'),
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "url": "git://github.com/cstruct/" + basename + ".git"
+  },
+  "author": "Albin Mattsson <albin@mattsson.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cstruct/" + basename + "/issues"
+  },
+  "homepage": "https://github.com/cstruct/" + basename + "#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "~7.1.2"
+  }
+}

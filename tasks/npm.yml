@@ -1,0 +1,28 @@
+---
+- name: Install global npm packages
+  npm:
+    name: '{{ item }}'
+    global: yes
+  with_items:
+    - commitizen
+    - mocha
+    - npm-check
+    - pkginit
+    - standard
+    - trash-cli
+    - typescript
+    - typings
+    - cmake-js
+  tags:
+    - packages
+
+- name: Make sure pkginit config dir exists
+  file:
+    path: '{{ ansible_env.HOME }}/.config/pkginit'
+    state: directory
+    recurse: yes
+
+- name: Copy default pkginit config
+  copy:
+    src: files/default.json
+    dest: '{{ ansible_env.HOME }}/.config/pkginit/default.json'

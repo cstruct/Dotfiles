@@ -1,0 +1,29 @@
+[push]
+  default = simple
+[user]
+  name = Albin Mattsson
+  email = albin@mattsson.io
+  signkey = 3293E330
+  signingKey = 3293E330
+[core]
+  excludesfile = /Users/albin/.gitignore-global
+  editor = vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[alias]
+  rmm = ! git branch --merged | grep -v \"\\*\" | grep -v master | xargs -r -n 1 git branch -d
+[commit]
+  gpgsign = true
+[gpg]
+  program = gpg2
+[credential]
+  helper = osxkeychain
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
