@@ -1,0 +1,7 @@
+---
+
+- name: GO > Create GOPATH directory
+  file:
+    dest: '{{ GOPATH }}'
+    state: directory
+  tags: go

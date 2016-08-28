@@ -25,6 +25,7 @@
     - gnupg
     - gnupg2
     - gnutls
+    - go
     - htop
     - imagemagick
     - llvm

@@ -1,5 +1,7 @@
 ---
 - hosts: localhost
+  vars:
+    GOPATH: ~/go
   tasks:
   - include: tasks/homebrew.yml
   - include: tasks/homebrew-casks.yml
@@ -7,4 +9,5 @@
   - include: tasks/git.yml
   - include: tasks/pip.yml
   - include: tasks/npm.yml
+  - include: tasks/go.yml
   - include: tasks/kwm.yml

@@ -6,7 +6,7 @@
     mode: 0600
 
 - name: Copy fish config
-  copy:
+  template:
     src: files/config.fish
     dest: '{{ ansible_env.HOME }}/.config/fish/config.fish'
 
