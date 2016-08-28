@@ -43,5 +43,6 @@
     - watch
     - wdiff
     - wget
+    - koekeishiya/kwm/kwm
   tags:
     - packages
