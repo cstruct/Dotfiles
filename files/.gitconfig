@@ -20,8 +20,8 @@
   up = pull --prune
   st = !git config --global commit.gpgsign false && git stash -k -u && git config --global commit.gpgsign true
   fresh = !git checkout master && git up && git rmm
-  alias = config --get-regexp ^alias\.
-  up-master = !export branch_name=$(git symbolic-ref -q HEAD | sed 's/^refs\/heads\///' | sed 's/^$/HEAD/') && git checkout master && git up && git checkout "$branch_name"
+  alias = config --get-regexp '^alias\\.'
+  up-master = !export branch_name=$(git symbolic-ref -q HEAD | sed 's/^refs\\/heads\\///' | sed 's/^$/HEAD/') && git checkout master && git up && git checkout "$branch_name"
 [commit]
   gpgsign = true
 [gpg]
