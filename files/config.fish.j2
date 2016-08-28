@@ -1,4 +1,11 @@
+# Enable virtualfish
 eval (python -m virtualfish)
+
+# Enable thefuck
 eval (thefuck --alias | tr '\n' ';')
+
+# Set GPG TTY to enable curses based Pinentry for gpg2
 set -gx GPG_TTY (tty)
+
+# Set GOPATH, needed to work woith Go
 set -gx GOPATH {{ GOPATH }}
