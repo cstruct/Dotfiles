@@ -45,6 +45,7 @@
     - wdiff
     - wget
     - koekeishiya/kwm/kwm
+    - ubersicht
   tags:
     - packages
     - homebrew

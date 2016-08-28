@@ -1,0 +1,7 @@
+---
+
+- name: UBERSICHT > Install nerdbar.widget
+  git:
+    repo: https://github.com/herrbischoff/nerdbar.widget
+    dest: ~/Library/Application Support/Übersicht/widgets/nerdbar.widget
+  tags: ubersicht

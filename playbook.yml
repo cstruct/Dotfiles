@@ -10,4 +10,6 @@
   - include: tasks/pip.yml
   - include: tasks/npm.yml
   - include: tasks/go.yml
+  - include: tasks/ui.yml
   - include: tasks/kwm.yml
+  - include: tasks/ubersicht.yml

@@ -1,0 +1,5 @@
+---
+
+- name: UI > Hide menu bar
+  command: defaults write 'Apple Global Domain' _HIHideMenuBar 1
+  tags: ui
