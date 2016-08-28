@@ -7,7 +7,7 @@
 
 - name: Copy fish config
   template:
-    src: files/config.fish
+    src: files/config.fish.j2
     dest: '{{ ansible_env.HOME }}/.config/fish/config.fish'
 
 - name: Set fish as login shell
