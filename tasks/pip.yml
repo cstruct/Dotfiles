@@ -4,3 +4,4 @@
     name: virtualfish
   tags:
     - packages
+    - pip

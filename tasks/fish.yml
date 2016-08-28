@@ -4,11 +4,14 @@
     url: https://raw.githubusercontent.com/oh-my-fish/theme-robbyrussell/master/fish_prompt.fish
     dest: '{{ ansible_env.HOME }}/.config/fish/functions/fish_prompt.fish'
     mode: 0600
+  tags: fish
 
 - name: Copy fish config
   template:
     src: files/config.fish.j2
     dest: '{{ ansible_env.HOME }}/.config/fish/config.fish'
+  tags: fish
 
 - name: Set fish as login shell
   shell: chsh -s /usr/local/bin/fish
+  tags: fish

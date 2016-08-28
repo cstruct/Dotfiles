@@ -15,14 +15,17 @@
     - cmake-js
   tags:
     - packages
+    - npm
 
 - name: Make sure pkginit config dir exists
   file:
     path: '{{ ansible_env.HOME }}/.config/pkginit'
     state: directory
     recurse: yes
+  tags: npm
 
 - name: Copy default pkginit config
   copy:
     src: files/default.json
     dest: '{{ ansible_env.HOME }}/.config/pkginit/default.json'
+  tags: npm
