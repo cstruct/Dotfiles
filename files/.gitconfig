@@ -6,6 +6,7 @@
   signkey = 3293E330
   signingKey = 3293E330
 [core]
+  attributesfile = /Users/albin/.gitattributes-global
   excludesfile = /Users/albin/.gitignore-global
   editor = vim
   pager = diff-so-fancy | less --tabs=4 -RFX
