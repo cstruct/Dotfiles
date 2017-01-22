@@ -6,10 +6,27 @@
     mode: 0600
   tags: fish
 
+- name: Download fisherman
+  get_url:
+    url: git.io/fisher
+    dest: '{{ ansible_env.HOME }}/.config/fish/functions/fisher.fish'
+    mode: 0600
+  tags: fish
+
 - name: Copy fish config
   template:
     src: files/config.fish.j2
     dest: '{{ ansible_env.HOME }}/.config/fish/config.fish'
+  tags: fish
+
+- name: Copy fishfile
+  template:
+    src: files/fishfile
+    dest: '{{ ansible_env.HOME }}/.config/fish/fishfile'
+  tags: fish
+
+- name: Install fisherman plugins
+  shell: fisher
   tags: fish
 
 - name: Set fish as login shell
