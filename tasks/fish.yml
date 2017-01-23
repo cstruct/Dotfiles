@@ -8,9 +8,9 @@
 
 - name: Download fisherman
   get_url:
-    url: git.io/fisher
+    url: https://git.io/fisher
     dest: '{{ ansible_env.HOME }}/.config/fish/functions/fisher.fish'
-    mode: 0600
+    mode: 0700
   tags: fish
 
 - name: Copy fish config
@@ -26,7 +26,7 @@
   tags: fish
 
 - name: Install fisherman plugins
-  shell: fisher
+  shell: fish -c 'fisher'
   tags: fish
 
 - name: Set fish as login shell
